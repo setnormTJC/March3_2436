@@ -18,6 +18,7 @@ struct Job
 	}
 };
 
+/*NOTE: this function is incomplete and will lead to an infinite loop!*/
 void processJobs(std::queue<Job>& jobsOnFirstCPU, std::queue<Job>& jobsOnSecondCPU)
 {
 	while (jobsOnFirstCPU.empty() == false && jobsOnSecondCPU.empty() == false)
@@ -35,7 +36,7 @@ void processJobs(std::queue<Job>& jobsOnFirstCPU, std::queue<Job>& jobsOnSecondC
 		}
 
 		jobsOnFirstCPU.pop(); 
-
+		
 		//std::priority_queue; //we'll come back to this (for HUFFMAN compression! yay!)
 	}
 }
